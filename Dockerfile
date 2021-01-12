@@ -1,7 +1,7 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update -y && apt-get upgrade -y && \
-    apt-get install mc htop ncdu openssh-server p7zip-full -y && \
+    apt-get install mc htop ncdu openssh-server p7zip-full wget -y && \
     mkdir /var/run/sshd && \
     echo 'root:MHzv9Sy9zm9p2z8J' | chpasswd && \
     sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
