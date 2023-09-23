@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM --platform=$BUILDPLATFORM ubuntu:18.04
 
 RUN apt-get update -y && apt-get upgrade -y && \
     apt-get install mc htop ncdu openssh-server p7zip-full wget -y && \
